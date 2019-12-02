@@ -13,6 +13,12 @@ const userSchema = new Schema({
         required: true,
         trim: true,
         minlength: 5
+    },
+    displayName: { 
+        type: String, 
+        required: true, 
+        trim: true, 
+        unique: true
     }
 }, {
     timestamps: true
