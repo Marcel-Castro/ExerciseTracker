@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 const setSchema = new Schema({
     reps: { type: Number, required: true },
     intensity: { type: String, required: true },
-    rpe: { type: Number, min: 1, max: 10}
+    rpe: { type: Number, min: 1, max: 10},
+    showRPE: {type: Boolean, default: false}
 })
 
 const exerciseSchema = new Schema({

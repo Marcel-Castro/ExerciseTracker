@@ -1,12 +1,14 @@
 const router = require('express').Router()
 let Exercise = require('../models/exercise.model')
 
-router.route('/').get((req, res) => {
-    Exercise.find()
+// Get all exercises for a user
+router.route('/byUser/:id').get((req, res) => {
+    Exercise.find({userID: req.params.id})
         .then(exercises => res.json(exercises))
         .catch(err => res.status(400).json('Error: ' + err))
 })
 
+// Get ONE specific exercise by it's id
 router.route('/:id').get((req, res) => {
     Exercise.findById(req.params.id)
         .then(exercises => res.json(exercises))
