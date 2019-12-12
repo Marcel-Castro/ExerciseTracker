@@ -1,0 +1,16 @@
+.exerciseCard:hover {
+    cursor: pointer;
+    background-color: #e0e0e0 !important;
+}
+
+.middleColCard {
+    margin-left: -30px !important;
+}
+
+.leftColCard {
+    margin-left: -100px !important;
+}
+
+.mainContainer {
+    max-width: 90% !important;
+}
